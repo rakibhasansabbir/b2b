@@ -99,11 +99,14 @@
               </div>
               <div class="card-footer">
                 <small class="text-danger">
-                  <span ng-repeat="item in star">
-                    <span>{{item}}</span>
+
+                  <span *ngFor="let dummy of ' '.repeat((3.5) | number:0).split('')">
+                    <span>&#9733;</span>
 
                   </span>
-                  <span ng-repeat="item in product.rating">&#9734;</span>
+                  <span *ngFor="let dummy of ' '.repeat((5-product.rating) ).split(''), let x = index">
+                    &#9734;
+                  </span>
                   <!-- <ng-container >
 
 
